@@ -1,0 +1,5 @@
+require('config.dashboard')
+require('config.telescope')
+require('config.fugitive')
+require('config.nvimtree')
+require('config.airline')
