@@ -1,0 +1,1 @@
+vim.cmd(' hi CursorLineNR  guifg=orange')

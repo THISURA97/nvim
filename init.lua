@@ -1,4 +1,8 @@
 
+
+require("bufferline").setup{}
+require('numb').setup()
+
 -- Sensible defaults
 require('settings')
 

@@ -77,7 +77,7 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\packer.nvim"
   },
-   ["packer.nvim"] = {
+   ["lualine.nvim"] = {
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\lualine.nvim"
   }
 
