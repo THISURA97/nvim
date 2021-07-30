@@ -1,0 +1,1 @@
+vim.g.airline_colorscheme = 'pinkmare'

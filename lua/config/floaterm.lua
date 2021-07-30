@@ -1,2 +1,2 @@
-vim.cmd(' hi FloatermBorder guibg=node guifg=orange')
+vim.cmd(' hi FloatermBorder guibg=NONE guifg=orange')
 

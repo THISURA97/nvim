@@ -1,3 +1,14 @@
+vim.g.dashboard_custom_header = {
+  ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
+  ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
+  ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
+  ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
+  ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
+  ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
+
+}
+
+
 vim.g.dashboard_default_executive = 'telescope'
 
 vim.g.dashboard_custom_section = {
@@ -6,5 +17,6 @@ vim.g.dashboard_custom_section = {
     c = {description = {'  Load Last Session  '}, command = 'SessionLoad'},
     d = {description = {'  Find Word          '}, command = 'Telescope live_grep'},
     e = {description = {'  Settings           '}, command = ':e C:/Users/tdini/AppData/Local/nvim/lua/settings.lua'},
-   -- f = {description = {'  Marks              '}, command = 'Telescope marks'}
+   -- f = {description = {'  Bookmarks              '}, command = 'Telescope marks'}
+    f = {description = {'  Change Colorscheme '}, command = 'DashboardChangeColorscheme'}
 }

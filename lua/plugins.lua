@@ -7,7 +7,9 @@ local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
     execute 'packadd packer.nvim'
-end
+end-- Bootstrap packer so it auto installs everywhere
+
+vim.cmd [[packadd packer.nvim]]
 
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 
@@ -26,8 +28,26 @@ use{'matsuuu/pinkmare'}
  -- Fuzzy finder
   use {
       'nvim-telescope/telescope.nvim',
-      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+
+      requires = {
+        {'nvim-lua/popup.nvim'},
+        {'nvim-lua/plenary.nvim'},
+
+      }
+
   }
+
+-- Lua
+use {
+  "folke/twilight.nvim",
+  config = function()
+    require("twilight").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
@@ -41,7 +61,8 @@ use{'matsuuu/pinkmare'}
 
   -- Treesitter
  use {'nvim-treesitter/nvim-treesitter'}
-require 'nvim-treesitter.install'.compilers = { "clang" }
+ require 'nvim-treesitter.install'.compilers = { "clang" }
+ use{'romgrk/nvim-treesitter-context'}
 
 
   -- Status Line and Bufferline
@@ -53,7 +74,7 @@ use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
 
   -- dashboard
-use { 'glepnir/dashboard-nvim' }
+use { 'glepnir/dashboard-nvim'}
 
 --whichkey
 use{'liuchengxu/vim-which-key'}
@@ -62,7 +83,7 @@ use{'liuchengxu/vim-which-key'}
 use{'voldikss/vim-floaterm'}
 
 --indentline
-use{'Yggdroot/indentLine'}
+
 use{'lukas-reineke/indent-blankline.nvim'}
 
 
@@ -80,6 +101,43 @@ use 'nacro90/numb.nvim'
 
 --vifm
 use{'vifm/vifm.vim'}
+
+--LeaderF
+use{'Yggdroot/LeaderF'}
+
+--cheatsheet
+use 'sudormrfbin/cheatsheet.nvim'
+
+--spaceduck
+use {'pineapplegiant/spaceduck', branch = 'main' }
+
+--bufkil
+use {'qpkorr/vim-bufkill'}
+
+--Jabs
+use 'matbme/JABS.nvim'
+
+  --git signs
+  use { 'lewis6991/gitsigns.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
+      }
+
+  --reload
+  use { 'famiu/nvim-reload',
+          requires = { 'nvim-lua/plenary.nvim' }
+
+      }
+
+  -- Autocompletion
+    use { 'hrsh7th/nvim-compe' }
+
+
+  -- Colorizer
+      use { 'norcalli/nvim-colorizer.lua'}
+
+  --semshi
+      use { 'numirias/semshi'}
+
 
 
 end)
