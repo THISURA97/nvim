@@ -1,5 +1,5 @@
-require('config.airline')
-require('config.bufferline')
+require('config.lualine')
+
 require('config.colorscheme')
 require('config.cursorline')
 require('config.dashboard')

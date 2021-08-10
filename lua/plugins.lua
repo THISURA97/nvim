@@ -66,17 +66,26 @@ use {
   use{'ryanoasis/vim-devicons'}
 
   -- Treesitter
- use {'nvim-treesitter/nvim-treesitter'}
- require 'nvim-treesitter.install'.compilers = { "clang" }
- use{'romgrk/nvim-treesitter-context'}
+ use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
+ require 'nvim-treesitter.install'.compilers = { "clang" }
+
+ use{'romgrk/nvim-treesitter-context',
+ config = function()
+      require('treesitter-context.config').setup {enable = true}
+   end
+  }
+
+ --still on testing
+ use{'nvim-treesitter/nvim-treesitter-textobjects'}
+ use {'RRethy/nvim-treesitter-textsubjects'}
 
   -- Status Line and Bufferline
- use {
-  {'vim-airline/vim-airline'},{'vim-airline/vim-airline-themes'}, requires = 'kyazdani42/nvim-web-devicons', branch = 'main'
+use {
+  'hoob3rt/lualine.nvim',
+  requires = {'kyazdani42/nvim-web-devicons', opt = true}
 }
 
-use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
 
 

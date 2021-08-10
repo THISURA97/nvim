@@ -51,7 +51,7 @@ map('n','<Leader>bl',':ToggleBlameLine<CR>',{noremap=true,silent=true})
 map('n','<Leader>ut',':MundoToggle<CR>',{noremap=true,silent=true})
 
 --Leaderf
-map('n','<Leader>lf',':Leaderf file<CR>',{noremap=true,silent=true})
+map('n','<Leader>lf',':Leaderf file --popup<CR>',{noremap=true,silent=true})
 
 --bufkill
 --Unloading/Deleting/Wiping

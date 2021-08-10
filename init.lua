@@ -11,9 +11,6 @@ Maintainer: THISURA97
 Website: https://github.com/THISURA97/Nvim
 --]]
 
-require("bufferline").setup{}
-require('numb').setup()
-
 
 -- Sensible defaults
 require('settings')
