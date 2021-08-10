@@ -9,4 +9,4 @@ Terminal &nbsp;&nbsp;: &nbsp;&nbsp; Windows Terminal Preview <br />
 
 ### 1. Customized Dashboard
 
-![Image of Dashboard](https://github.com/THISURA97/nvim/blob/master/image/Dashboard.png)
+![Image of Dashboard](https://github.com/THISURA97/nvim/blob/master/image/dashboard.png)
