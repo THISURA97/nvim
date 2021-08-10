@@ -20,3 +20,6 @@ tags
 
 #plugged directory
 plugged/*
+
+#vscode
+.vscode

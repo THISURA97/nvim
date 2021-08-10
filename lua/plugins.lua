@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 
 
 --colorscheme
-use{'matsuuu/pinkmare'}
+--use{'matsuuu/pinkmare'}
 
   -- dashboard
 use { 'glepnir/dashboard-nvim'}
