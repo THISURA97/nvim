@@ -10,4 +10,7 @@ require('config.leaderf')
 require('config.numb')
 require('config.nvimtree')
 require('config.telescope')
-require('config.whichkey')
+
+require('config.package-info')
+require('config.wilder')
+

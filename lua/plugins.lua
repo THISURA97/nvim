@@ -33,15 +33,10 @@ use { 'glepnir/dashboard-nvim'}
 
  -- Fuzzy finder
   use {
-      'nvim-telescope/telescope.nvim',
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 
-      requires = {
-        {'nvim-lua/popup.nvim'},
-        {'nvim-lua/plenary.nvim'},
-
-      }
-
-  }
+}
 
 -- Lua
 use {
@@ -152,7 +147,14 @@ use 'matbme/JABS.nvim'
   --semshi
       use { 'numirias/semshi'}
 
+  --package.json info
+      use { "vuki656/package-info.nvim" }
 
+  --menu
+      use {'gelguy/wilder.nvim',  run = ':UpdateRemotePlugins' }
+
+  --fzy-lua-native
+     use{'romgrk/fzy-lua-native'}
 
 end)
 

@@ -35,9 +35,6 @@ map('i', 'jj', '<ESC>', {noremap = true, silent = true})
 map('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
 map('n', '<S-TAB>', ':bprevious<CR>', {noremap = true, silent = true})
 
---Which key
-map('n','<Leader>x',':WhichKey ""<CR>',{noremap=true,silent=true})
-
 --flaoterm
 map('n','<Leader>ft',':FloatermToggle<CR>',{noremap=true,silent=true})
 
