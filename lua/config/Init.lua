@@ -1,32 +1,13 @@
---[[
-  ██╗███╗   ██╗██╗████████╗██╗     ██╗   ██╗ █████╗
-  ██║████╗  ██║██║╚══██╔══╝██║     ██║   ██║██╔══██╗
-  ██║██╔██╗ ██║██║   ██║   ██║     ██║   ██║███████║
-  ██║██║╚██╗██║██║   ██║   ██║     ██║   ██║██╔══██║
-  ██║██║ ╚████║██║   ██║██╗███████╗╚██████╔╝██║  ██║
-  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
-neovim configuration file
-Version: nightly
-Maintainer: THISURA97
-Website: https://github.com/THISURA97/Nvim
---]]
-
---require("bufferline").setup{}
---require('numb').setup()
-
--- Sensible defaults
-require('settings')
-
--- Key mappings
-require('keymappings')
-
--- Plugins
-require('plugins')
-
--- Another option is to groups configuration in one folder
-require('config')
-
--- LSP
-
-
-
+require('config.airline')
+require('config.bufferline')
+require('config.colorscheme')
+require('config.cursorline')
+require('config.dashboard')
+require('config.floaterm')
+require('config.fugitive')
+require('config.indentline')
+require('config.leaderf')
+require('config.numb')
+require('config.nvimtree')
+require('config.telescope')
+require('config.whichkey')

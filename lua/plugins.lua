@@ -1,10 +1,13 @@
--- vim.cmd [[packadd packer.nvim]]
+
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
+
+    vim.api.nvim_echo({{'Installing packer.nvim', 'Type'}}, true, {})
+
     execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
     execute 'packadd packer.nvim'
 end-- Bootstrap packer so it auto installs everywhere
@@ -24,6 +27,9 @@ return require('packer').startup(function(use)
 
 --colorscheme
 use{'matsuuu/pinkmare'}
+
+  -- dashboard
+use { 'glepnir/dashboard-nvim'}
 
  -- Fuzzy finder
   use {
@@ -73,8 +79,7 @@ use {
 use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
 
-  -- dashboard
-use { 'glepnir/dashboard-nvim'}
+
 
 --whichkey
 use{'liuchengxu/vim-which-key'}

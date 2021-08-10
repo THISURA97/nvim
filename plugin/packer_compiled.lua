@@ -1,4 +1,4 @@
-a-- Automatically generated packer.nvim plugin loader code
+-- Automatically generated packer.nvim plugin loader code
 
 if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then
   vim.api.nvim_command('echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"')
@@ -25,7 +25,7 @@ local no_errors, error_msg = pcall(function()
   else
     time = function(chunk, start) end
   end
-
+  
 local function save_profiles(threshold)
   local sorted_times = {}
   for chunk_name, time_taken in pairs(profile_info) do
@@ -93,14 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim"
   },
-  indentLine = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indentLine"
-  },
-  ["lsp_signature.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp_signature.nvim"
-  },
   ["numb.nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\numb.nvim"
@@ -117,14 +109,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-compe"
   },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspinstall"
-  },
   ["nvim-reload"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-reload"
@@ -136,6 +120,10 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-context"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -158,6 +146,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim"
   },
+  semshi = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\semshi"
+  },
   spaceduck = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\spaceduck"
@@ -169,6 +161,11 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim"
+  },
+  ["twilight.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtwilight\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\twilight.nvim"
   },
   ["vifm.vim"] = {
     loaded = true,
@@ -213,6 +210,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
+time([[Config for twilight.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
