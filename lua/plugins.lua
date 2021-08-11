@@ -43,9 +43,7 @@ use {
   "folke/twilight.nvim",
   config = function()
     require("twilight").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
+
     }
   end
 }
@@ -81,10 +79,6 @@ use {
   requires = {'kyazdani42/nvim-web-devicons', opt = true}
 }
 
-
-
-
-
 --whichkey
 use{'liuchengxu/vim-which-key'}
 
@@ -92,7 +86,6 @@ use{'liuchengxu/vim-which-key'}
 use{'voldikss/vim-floaterm'}
 
 --indentline
-
 use{'lukas-reineke/indent-blankline.nvim'}
 
 
@@ -138,7 +131,7 @@ use 'matbme/JABS.nvim'
       }
 
   -- Autocompletion
-    use { 'hrsh7th/nvim-compe' }
+
 
 
   -- Colorizer
@@ -155,6 +148,12 @@ use 'matbme/JABS.nvim'
 
   --fzy-lua-native
      use{'romgrk/fzy-lua-native'}
+
+  --delimit
+     use{'Raimondi/delimitMate'}
+
+  --coc
+     use {'neoclide/coc.nvim', branch = 'release'}
 
 
 end)

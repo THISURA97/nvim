@@ -65,9 +65,11 @@ map('n','<Leader>bw',':BW<CR>',{noremap=true,silent=true})
 --bufkill
 --Moving through buffers
 
-map('n','<Leader>bb',':BB<CR>',{noremap=true,silent=true})
+map('n','<Leader>z',':BB<CR>',{noremap=true,silent=true})
 --To move backwards through recently accessed buffers:
 
-map('n','<Leader>bf',':BF<CR>',{noremap=true,silent=true})
+map('n','<Leader>x',':BF<CR>',{noremap=true,silent=true})
 --and to move forwards:
+
+
 

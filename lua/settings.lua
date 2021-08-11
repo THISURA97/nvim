@@ -38,7 +38,7 @@ o.secure            = true
 o.modelines         = 1         -- read a modeline at EOF
 o.errorbells        = false     -- disable error bells (no beep/flash)
 o.termguicolors     = true      -- enable 24bit colors
-o.updatetime        = 250       -- decrease update time
+o.updatetime        = 200       -- decrease update time
 o.autoread          = true      -- auto read file if changed outside of vim
 
 o.switchbuf         = 'useopen'
@@ -47,15 +47,15 @@ o.fileencoding      = 'utf-8'
 o.backspace         = 'indent,eol,start'
 
 -- Neovim UI
-o.syntax           = 'enable'   -- enable syntax highlighting
-o.relativenumber   = false
-o.showmatch        = true       -- highlight matching parenthesis
-w.foldmethod       = 'indent'   -- enable folding (default 'foldmarker')
-w.colorcolumn      = '80'       -- line lenght marker at 80 columns
-o.splitright       = true       -- vertical split to the right
-o.splitbelow       = true       -- horizontal split to the bottom
-o.ignorecase       = true       -- ignore case letters when search
-o.smartcase        = true       -- ignore lowercase for the whole pattern
+o.syntax            = 'enable'  -- enable syntax highlighting
+o.relativenumber    = false     -- disable relative number
+o.showmatch         = true      -- highlight matching parenthesis
+w.foldmethod        = 'indent'  -- enable folding (default 'foldmarker')
+w.colorcolumn       = '80'      -- line lenght marker at 80 columns
+o.splitright        = true      -- vertical split to the right
+o.splitbelow        = true      -- horizontal split to the bottom
+o.ignorecase        = true      -- ignore case letters when search
+o.smartcase         = true      -- ignore lowercase for the whole pattern
 o.showmode          = true      -- show current mode (insert, etc) under the cmdline
 o.showcmd           = true      -- show current command under the cmd line
 o.cmdheight         = 2         -- cmdline height
@@ -68,7 +68,7 @@ o.ruler             = true      -- show line,col at the cursor pos
 o.number            = true      -- show absolute line no. at the cursor pos
 o.cursorline        = true      -- Show a line where the current cursor is
 wo.signcolumn       = 'yes'     -- Show sign column as first column
-g.colorcolumn       = 81        -- mark column 81
+g.colorcolumn       = 100       -- mark column 100
 o.colorcolumn       = string.format(g.colorcolumn)
 o.wrap              = true      -- wrap long lines
 o.breakindent       = true      -- start wrapped lines indented
@@ -98,10 +98,10 @@ exec([[
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
-o.hidden = true         -- enable background buffers
-o.history = 100         -- remember n lines in history
-o.lazyredraw = true     -- faster scrolling - Don’t update screen during macro and script execution.
-b.synmaxcol = 240       -- max column for syntax highlight
+o.hidden        = true        -- enable background buffers
+o.history       = 100         -- remember n lines in history
+o.lazyredraw    = true        -- faster scrolling - Don’t update screen during macro and script execution.
+b.synmaxcol     = 300         -- max column for syntax highlight
 
 
 -----------------------------------------------------------
@@ -117,7 +117,7 @@ cmd([[colorscheme spaceduck]])    -- set colorscheme
 o.shiftwidth        = 4         -- Indent/outdent by two columns
 o.shiftround        = true      -- Always indent/outdent to nearest tabstop
 o.smartindent       = true      -- autoindent new lines
-o.autoindent        = true      -- New lines inherit the indentation of previous lines.
+
 o.tabstop           = 4         -- Tab indentation levels every two columns
 o.softtabstop       = 4         -- Tab indentation when mixing tabs & spaces
 o.expandtab         = true      -- Convert all tabs that are typed into spaces
@@ -160,8 +160,6 @@ o.shortmess = 'c'                           -- don't show completion messages
 cmd 'set undofile'
 cmd 'set undodir=~/.vim/undo'
 
-cmd 'set number'
-
 cmd 'filetype plugin indent on'
 
 -- hide line numbers in terminal windows
@@ -186,16 +184,28 @@ g.markdown_fenced_languages = {
 }
 
 
+-----------------------------------------------------------
+-- Boolean value
+-----------------------------------------------------------
 
+o.backup      = false        -- disable backup
+o.autowrite   = true         -- autowrite buffer when it's not focused
+o.list        = true         -- display listchars
+o.writebackup = false        -- disable backup
 
+-----------------------------------------------------------
+-- String value
+-----------------------------------------------------------
 
+o.backupcopy      = "yes"   -- fix weirdness for postcss
+o.inccommand       = "split"-- incrementally show result of command  -- listchars = "tab:»\\ ", -- set listchars
 
+o.listchars        = "tab:»·,nbsp:+,trail:·,extends:→,precedes:←"          -- set listchars
 
+-----------------------------------------------------------
+-- Number value
+-----------------------------------------------------------
 
-
-
-
-
-
-
-
+o.pumheight     = 10          -- limit completion items
+o.re            = 0           -- set regexp engine to auto
+o.timeoutlen    = 400         -- faster timeout wait time
