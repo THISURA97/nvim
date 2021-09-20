@@ -11,6 +11,7 @@ Maintainer: THISURA97
 Website: https://github.com/THISURA97/Nvim
 --]]
 
+
 -- Sensible defaults
 require('settings')
 
@@ -24,6 +25,4 @@ require('plugins')
 require('config')
 
 -- LSP
-
-
 

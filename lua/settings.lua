@@ -1,6 +1,15 @@
 -----------------------------------------------------------
 -- Neovim settings
 -----------------------------------------------------------
+--[[
+███████╗    ███████╗    ████████╗    ████████╗    ██╗    ███╗   ██╗     ██████╗     ███████╗
+██╔════╝    ██╔════╝    ╚══██╔══╝    ╚══██╔══╝    ██║    ████╗  ██║    ██╔════╝     ██╔════╝
+███████╗    █████╗         ██║          ██║       ██║    ██╔██╗ ██║    ██║  ███╗    ███████╗
+╚════██║    ██╔══╝         ██║          ██║       ██║    ██║╚██╗██║    ██║   ██║    ╚════██║
+███████║    ███████╗       ██║          ██║       ██║    ██║ ╚████║    ╚██████╔╝    ███████║
+╚══════╝    ╚══════╝       ╚═╝          ╚═╝       ╚═╝    ╚═╝  ╚═══╝     ╚═════╝     ╚══════╝
+
+--]]
 
 -- This file can be loaded by calling `require('module_name')` from your
 -- init.lua
@@ -108,7 +117,7 @@ b.synmaxcol     = 300         -- max column for syntax highlight
 -- Colorscheme
 -----------------------------------------------------------
 o.termguicolors = true           -- enable 24-bit RGB colorss
-cmd([[colorscheme spaceduck]])    -- set colorscheme
+cmd([[colorscheme rose-pine]])    -- set colorscheme
 
 -----------------------------------------------------------
 -- Tabs, indent
@@ -166,6 +175,8 @@ cmd 'filetype plugin indent on'
 exec([[
    au BufEnter term://* setlocal nonumber
 ]], false)
+
+
 
 g.markdown_fenced_languages = {
   'vim',

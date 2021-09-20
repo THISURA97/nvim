@@ -81,33 +81,45 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cheatsheet.nvim"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dashboard-nvim"
+  },
+  delimitMate = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\delimitMate"
+  },
+  ["fzy-lua-native"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzy-lua-native"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim"
   },
   ["numb.nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\numb.nvim"
   },
-  ["nvim-bufferline.lua"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-bufferline.lua"
-  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua"
-  },
-  ["nvim-compe"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-compe"
   },
   ["nvim-reload"] = {
     loaded = true,
@@ -122,21 +134,30 @@ _G.packer_plugins = {
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter"
   },
   ["nvim-treesitter-context"] = {
+    config = { "\27LJ\2\nV\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\venable\2\nsetup\30treesitter-context.config\frequire\0" },
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-context"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-textobjects"
+  },
+  ["nvim-treesitter-textsubjects"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-textsubjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons"
   },
+  ["package-info.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\package-info.nvim"
+  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\packer.nvim"
-  },
-  pinkmare = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\pinkmare"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -145,6 +166,10 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim"
+  },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine"
   },
   semshi = {
     loaded = true,
@@ -170,14 +195,6 @@ _G.packer_plugins = {
   ["vifm.vim"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vifm.vim"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline-themes"
   },
   ["vim-bufkill"] = {
     loaded = true,
@@ -206,10 +223,18 @@ _G.packer_plugins = {
   ["vim-which-key"] = {
     loaded = true,
     path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-which-key"
+  },
+  ["wilder.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\tdini\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\wilder.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-treesitter-context
+time([[Config for nvim-treesitter-context]], true)
+try_loadstring("\27LJ\2\nV\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\venable\2\nsetup\30treesitter-context.config\frequire\0", "config", "nvim-treesitter-context")
+time([[Config for nvim-treesitter-context]], false)
 -- Config for: twilight.nvim
 time([[Config for twilight.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")

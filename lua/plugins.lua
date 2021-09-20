@@ -1,4 +1,12 @@
+--[[
+██████╗     ██╗         ██╗   ██╗     ██████╗     ██╗    ███╗   ██╗    ███████╗
+██╔══██╗    ██║         ██║   ██║    ██╔════╝     ██║    ████╗  ██║    ██╔════╝
+██████╔╝    ██║         ██║   ██║    ██║  ███╗    ██║    ██╔██╗ ██║    ███████╗
+██╔═══╝     ██║         ██║   ██║    ██║   ██║    ██║    ██║╚██╗██║    ╚════██║
+██║         ███████╗    ╚██████╔╝    ╚██████╔╝    ██║    ██║ ╚████║    ███████║
+╚═╝         ╚══════╝     ╚═════╝      ╚═════╝     ╚═╝    ╚═╝  ╚═══╝    ╚══════╝
 
+]]
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -28,13 +36,25 @@ return require('packer').startup(function(use)
 --colorscheme
 --use{'matsuuu/pinkmare'}
 
+use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+
   -- dashboard
 use { 'glepnir/dashboard-nvim'}
 
  -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires =
+    {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+
+      config = function()
+      require("config.telescope").setup()
+    end,
+
+    }
 
 }
 
@@ -55,11 +75,27 @@ use {
   use 'kyazdani42/nvim-tree.lua'
 
   --Icons
-  use 'kyazdani42/nvim-web-devicons'
+   -- Devicons
+  use {
+    "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("config.nvim_web_devicons").setup()
+    end
+  }
+
   use{'ryanoasis/vim-devicons'}
 
   -- Treesitter
- use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+ use {
+   'nvim-treesitter/nvim-treesitter',
+    branch = "0.5-compat",
+    run = ':TSUpdate',
+
+    config = function()
+      require("config.treesitter").setup()
+    end,
+
+  }
 
  require 'nvim-treesitter.install'.compilers = { "clang" }
 
@@ -76,7 +112,11 @@ use {
   -- Status Line and Bufferline
 use {
   'hoob3rt/lualine.nvim',
-  requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  requires = {'kyazdani42/nvim-web-devicons', opt = true},
+
+  config = function()
+      require("config.lualine").setup()
+    end
 }
 
 --whichkey
@@ -86,7 +126,13 @@ use{'liuchengxu/vim-which-key'}
 use{'voldikss/vim-floaterm'}
 
 --indentline
-use{'lukas-reineke/indent-blankline.nvim'}
+use{'lukas-reineke/indent-blankline.nvim',
+
+ config = function()
+      require('config.blankline').setup()
+    end
+
+}
 
 
 --tagbar
@@ -132,10 +178,24 @@ use 'matbme/JABS.nvim'
 
   -- Autocompletion
 
-
+ -- autopairs
+  use {
+   "windwp/nvim-autopairs",
+   event = "InsertEnter",
+   -- after = "nvim-compe",
+   config = function()
+     require "config.autopairs"
+   end,
+ }
 
   -- Colorizer
-      use { 'norcalli/nvim-colorizer.lua'}
+      use {
+        'norcalli/nvim-colorizer.lua',
+
+        config = function()
+        require("colorizer").setup()
+    end
+      }
 
   --semshi
       use { 'numirias/semshi'}
@@ -155,6 +215,12 @@ use 'matbme/JABS.nvim'
   --coc
      use {'neoclide/coc.nvim', branch = 'release'}
 
+
+  -- gps
+      use {
+        "SmiteshP/nvim-gps",
+        requires = "nvim-treesitter/nvim-treesitter"
+      }
 
 end)
 

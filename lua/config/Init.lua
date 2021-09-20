@@ -13,5 +13,6 @@ require('config.telescope')
 
 require('config.package-info')
 require('config.wilder')
+require('config.gps')
 
 
